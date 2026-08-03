@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav id="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+
+        <img src="img/perfil.jpeg" alt="perfil" class="foto-perfil">
+        <h1>Lucas Soares</h1>
+        <p class="dev">Desenvolvedor em Formação </p>
+
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou Lucas Soares, 25 anos, estudante de Ciência da Computação (3º semestre).
+                Tenho experiência no setor varejista (Atacadão), onde desenvolvi habilidades de organização, comunicação
+                e trabalho em equipe. Estou em busca da minha primeira oportunidade em TI, com foco em desenvolvimento e
+                suporte técnico. Atualmente estudo e prático HTML, CSS e JavaScript, além de lógica de programação,
+                estou sempre em constante aprendizado e aberto a novos desafios.</p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+
+        <h2 class="projetos-titulo">Meus Projetos </h2>
+
+        <div class="projetos-caixa">
+
+              <div class="projetos-card">
+
+                <img src="img/banner.png" alt="projeto 1" class="projetos-imagem">
+
+                <div class="caixa-textos-projetos">
+
+                    <h3 class="info-projetos">BarbaBranca Tattoo — Site Institucional para Estúdio de Tatuagem</h3>
+                    <p class="paragrafo-projetos">Meu primeiro site institucional e "profissional" desenvolvido para um tatuador freelancer, criado
+                        para substituir o Instagram como principal canal de divulgação. Conta com galeria de trabalhos
+                        filtrável por estilo (realismo, traço fino e coberturas), formulário de agendamento que gera uma
+                        mensagem formatada direto pro WhatsApp, e página de contato com mapa integrado. Totalmente
+                        responsivo, construído com HTML, CSS e JavaScript puro.
+                    </p>
+                </div>
+                <div class="links-projeto">
+                    <a href="https://barbabranca.vercel.app" target="_blank">Ver Projeto</a>
+
+                    <a href="https://github.com/Lucas-Soaresdf/barbabranca" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+           
+
+            <div class="projetos-card">
+
+                <img src="img/lista.png" alt="projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Lista de tarefas</h3>
+                    <p class="paragrafo-projetos">Projeto de lista de tarefas desenvolvido com HTML, CSS e JavaScript.
+                        Neste projeto pratiquei manipulação do DOM, eventos, arrays e lógica de programação, criando
+                        funcionalidades para adicionar, remover e organizar tarefas de forma dinâmica.
+                    </p>
+                </div>
+                <div class="links-projeto">
+                    <a href="https://lista-de-tarefas-eight-rho.vercel.app/" target="_blank">Ver Projeto</a>
+
+                    <a href="https://github.com/Lucas-Soaresdf/lista-de-tarefas" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+           <div class="projetos-card">
+
+                <img src="img/calculadora.png" alt="projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+
+                    <h3 class="info-projetos">Calculadora</h3>
+
+                    <p class="paragrafo-projetos">Mini projeto de calculadora desenvolvido com HTML, CSS e JavaScript.
+                        Durante o desenvolvimento pratiquei lógica de programação, manipulação do DOM, eventos e
+                        operações matemáticas básicas, além de trabalhar na organização do código e na interação com o
+                        usuário.
+                    </p>
+                </div>
+                <div class="links-projeto">
+                    <a href="https://lucas-soares-calculadora.vercel.app/" target="_blank">Ver Projeto</a>
+
+                    <a href="https://github.com/Lucas-Soaresdf/calculadora" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
+    </section>
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5583996872229'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem} `
+            const mensagemFormatada = encodeURIComponent(`texto`)
+            const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`
+            window.open(url, '_blank')
+        }
+
+    </script>
+</body>
+
+</html>
