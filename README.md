@@ -16,4 +16,4 @@ BarbaBranca Tattoo — site freelance para estúdio de tatuagem, com sistema de 
 Calculadora, Lista de Tarefas, Calculadora de IMC e Relógio Dinâmico — projetos front-end que exercitam lógica e manipulação do DOM
 Contato
 LinkedIn https://www.linkedin.com/in/lucassoares-dev/
-Portfólio https://lsportifolio-one.vercel.app/
+Portfólio https://lsportifolio-gamma.vercel.app/
